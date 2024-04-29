@@ -5,7 +5,7 @@ import React from 'react';
 import { useState } from 'react'
 import ReactModal from 'react-modal';
 import { useRouter } from 'next/router';
-
+import Link from 'next/link';
 
 // export default function Counter() {
 //   const [count, setCount] = useState(0)
@@ -13,13 +13,12 @@ let score: number = 0;
 let checkResult: boolean = false;
 
 export default function Home() {
-
+  
   'use client'
   // const handleClick = () => {
   //   console.log('Action button clicked!');
   // };
   
-
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
 
   const openModalTrue = () => {
@@ -49,12 +48,7 @@ export default function Home() {
     }
   };
 
-  const router = useRouter();
-
-  const handleOkButtonClick = () => {
-    // เปิดลิงก์ไปยัง /page2
-    router.push('/page2');
-  };
+  
 
   return (
     <main>
@@ -129,7 +123,15 @@ export default function Home() {
         }}
       >
         <h2 className="text-blue-500">It False</h2>
-        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">ok</button>
+        <Link href="/page2">
+        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">  
+        ok;=;</button>
+        </Link>  
+        {/* <button>
+          <Link href="/page2">
+          <a>OK</a>
+          </Link>
+        </button> */}
       </ReactModal>
 
 
@@ -137,60 +139,7 @@ export default function Home() {
 
       </div>
 
-
-      {/* <div>
-      <button onClick={openModal}>Test Modal</button>
-      <ReactModal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        ariaHideApp={false}
-        style={{
-          overlay: {
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          },
-          content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            width: '500px', 
-            height: '300px',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            border: 'none',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            borderRadius: '8px',
-            padding: '20px',
-          },
-        }}
-      >
-        <h2 className="text-blue-500">Modal Content</h2>
-      </ReactModal>
-    </div> */}
-
     </main>
   
   );
 }
-
-
-
-
-
-
-
-
-// 'use client'
- 
-// import { useState } from 'react'
- 
-// export default function Counter() {
-//   const [count, setCount] = useState(0)
- 
-//   return (
-//     <div>
-//       <p>You clicked {count} times</p>
-//       <button onClick={() => setCount(count + 1)}>Click me</button>
-//     </div>
-//   )
-// }
