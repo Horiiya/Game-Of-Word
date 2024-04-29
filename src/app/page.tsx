@@ -4,6 +4,8 @@ import ListeningImg from "../app/ImageOfWord/listening.jpg";
 import React from 'react';
 import { useState } from 'react'
 import ReactModal from 'react-modal';
+import { useRouter } from 'next/router';
+
 
 // export default function Counter() {
 //   const [count, setCount] = useState(0)
@@ -11,11 +13,12 @@ let score: number = 0;
 let checkResult: boolean = false;
 
 export default function Home() {
-  
+
   'use client'
-  const handleClick = () => {
-    console.log('Action button clicked!');
-  };
+  // const handleClick = () => {
+  //   console.log('Action button clicked!');
+  // };
+  
 
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
 
@@ -44,6 +47,13 @@ export default function Home() {
       score += 1;
       checkResult = false
     }
+  };
+
+  const router = useRouter();
+
+  const handleOkButtonClick = () => {
+    // เปิดลิงก์ไปยัง /page2
+    router.push('/page2');
   };
 
   return (
@@ -89,6 +99,7 @@ export default function Home() {
         }}
       >
         <h2 className="text-blue-500">It True</h2>
+        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">ok</button>
         
       </ReactModal>
 
@@ -118,6 +129,7 @@ export default function Home() {
         }}
       >
         <h2 className="text-blue-500">It False</h2>
+        <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">ok</button>
       </ReactModal>
 
 
