@@ -4,8 +4,10 @@ import ListeningImg from "../app/ImageOfWord/listening.jpg";
 import React from 'react';
 import { useState } from 'react'
 import ReactModal from 'react-modal';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 // export default function Counter() {
 //   const [count, setCount] = useState(0)
@@ -18,6 +20,7 @@ export default function Home() {
   // const handleClick = () => {
   //   console.log('Action button clicked!');
   // };
+
   
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
 
@@ -48,7 +51,8 @@ export default function Home() {
     }
   };
 
-  
+
+  const router = useRouter();
 
   return (
     <main>
@@ -122,20 +126,26 @@ export default function Home() {
           },
         }}
       >
-        <h2 className="text-blue-500">It False</h2>
+        {/* <h2 className="text-blue-500">It False</h2>
         <Link href="/page2">
         <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">  
-        ok;=;</button>
-        </Link>  
-        {/* <button>
-          <Link href="/page2">
-          <a>OK</a>
-          </Link>
-        </button> */}
+        ok;={score}</button>
+        </Link>   */}
+
+        <Link href={{
+          pathname: '/page2',
+          query : {
+            score: score
+          }
+        }}>
+          <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">  
+        ok;={score}</button> Go to some another page</Link>  
+      
+
       </ReactModal>
 
 
-      <button onClick={openModalFalse} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Drinking</button>
+      {/* <button onClick={openModalFalse} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Drinking</button> */}
 
       </div>
 
@@ -143,3 +153,6 @@ export default function Home() {
   
   );
 }
+
+
+

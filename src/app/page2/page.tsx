@@ -1,3 +1,46 @@
+// import Link from 'next/link';
+
+// export default function Page2() {
+ 
+//   return (
+//     <div>
+//       <Link href="/page2">This is page 2</Link>
+//     </div>
+//   )
+// }
+
+import Link from 'next/link';
+import React from 'react';
+
+export default function Page({ searchParams } : {
+  searchParams: {
+    score : number;
+  };
+}) {
+  console.log(searchParams.score)
+  const score = searchParams.score
+ 
+  return (
+    <div>
+      <Link href="/page2">This is page 2</Link>
+      {/* <p>this is my score{score}</p> */}
+      <p className="text-blue-500 text-3xl text-center">Game Of Word</p>
+      <p className="text-blue-500 text-3xl text-center">what is this word?</p>
+      <p className="text-blue-500 text-3xl text-right">Score : {score}</p>
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
 // 'use client'
 // import Image from "next/image";
 // import ListeningImg from "../app/ImageOfWord/listening.jpg";
@@ -6,19 +49,45 @@
 // import ReactModal from 'react-modal';
 // import { useRouter } from 'next/router';
 // import Link from 'next/link';
-// import score from '../page'
+// // import score from '../page'
 
 
-// let checkResult: boolean = false;
-export default function Page() {
+// // let checkResult: boolean = false;
+// export default function Page() {
+
+//   interface Page2Props {
+//     score: number;
+//   }
+
+//   const Page2: React.FC<Page2Props> = ({ score }) => {
+//     // Access the score prop here
+//     return (
+//       <div>
+//         <h2>Your Score: {score}</h2>
+//         {/* Rest of your page 2 content */}
+//       </div>
+//     );
+//   };
+  
  
-  return (
-    <div>
-      {/* <Link href="/page2">This is page 2 test</Link> */}
-      <a>123</a>
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       {/* <Link href="/page2">This is page 2 test</Link> */}
+//       <a>123</a>
+
+//       <Link href="/page2">
+//       <button className="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> ok;={score}</button>
+//       </Link>
+//     </div>
+//   )
+// }
+
+
+
+
+
+
+
 
 // export default function Page() {
   
