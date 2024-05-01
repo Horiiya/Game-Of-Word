@@ -23,7 +23,7 @@ export default function Page({ searchParams } : {
   return (
     <div>
       <Link href="/page2">This is page 2</Link>
-      {/* <p>this is my score{score}</p> */}
+      <p>this is my score{score}</p>
       <p className="text-blue-500 text-3xl text-center">Game Of Word</p>
       <p className="text-blue-500 text-3xl text-center">what is this word?</p>
       <p className="text-blue-500 text-3xl text-right">Score : {score}</p>

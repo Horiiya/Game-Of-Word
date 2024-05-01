@@ -7,8 +7,8 @@ interface ImageProps {
 
 const ImageComponent: FC<ImageProps> = ({ src, alt }) => {
   return (
-    <div>
-      <img src={src} alt={alt} />
+    <div className="flex justify-center">
+      <img src={src} alt={alt} width={300} height={50}/>
     </div>
   );
 };
