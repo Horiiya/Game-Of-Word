@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'blueTest' : '#1D5B95'
+        'blueOfButton' : '#1D5B95',
+        'hoverOfButton' : '#318FE7'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

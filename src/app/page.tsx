@@ -58,7 +58,11 @@ export default function Home() {
 
         <ModalComponents nameOfModal="It's False" state={modalFalseIsOpen} setTest={setModalFalseIsOpen} scoreTest={score} />
       </div>
-      
+      <br className="word-break: break-all"/>
+      <div  className="flex bg-white-500 h-24">
+        <p>;=;</p>
+
+      </div>
     </main>
   );
 }
