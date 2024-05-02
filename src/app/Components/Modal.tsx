@@ -47,7 +47,8 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest }: Moda
         },
       }}
     >
-    <h2 className="text-blue-500">{nameOfModal}</h2>
+    <h2 className="text-blue-500 text-center text-2xl">{nameOfModal}</h2>
+    <div className="bg-white-500 flex justify-center items-end h-56">
     <ButtonTrue
         name="Next Question"
         fnOnClick={() => {
@@ -57,6 +58,7 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest }: Moda
           
         }}
       />
+    </div>  
     
     </ReactModal>
   );

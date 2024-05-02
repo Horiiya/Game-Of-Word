@@ -15,12 +15,14 @@ import ModalComponents from "./Components/Modal";
 export default function Home() {
   
   const [score, setScore] = useState<number>(0);
+  // const [question, setQuestion] = useState
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
 
   return (
     <main>
       <Header />
+      {/* <p className="text-3xl text-end">Question : {score}</p> */}
       <p className="text-3xl text-end">score : {score}</p>
       <Picture src='https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg' alt="Listening" />
 
