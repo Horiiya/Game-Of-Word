@@ -12,7 +12,6 @@ export function Button({name, fnOnClick}: ButtonProps) {
       onClick={() => {
       if (fnOnClick) {
         fnOnClick();
-        
       }
     }}>
       {name}

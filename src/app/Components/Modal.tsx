@@ -8,9 +8,10 @@ interface ModalProps {
   state: boolean;
   setTest: React.Dispatch<React.SetStateAction<boolean>>;
   scoreTest: number;
+  question: number;
 }
 
-export function ModalComponents({ nameOfModal, state, setTest, scoreTest }: ModalProps) {
+export function ModalComponents({ nameOfModal, state, setTest, scoreTest, question}: ModalProps) {
 
   const router = useRouter();
 
@@ -52,10 +53,12 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest }: Moda
     <ButtonTrue
         name="Next Question"
         fnOnClick={() => {
+          // setTimeout(() => {
+          //   router.push(`/page2?score=${scoreTest}`)
+          // }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
           setTimeout(() => {
-            router.push(`/page2?score=${scoreTest}`)
+            router.push(`/question${question}?score=${scoreTest}`)
           }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
-          
         }}
       />
     </div>  

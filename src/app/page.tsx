@@ -17,14 +17,14 @@ export default function Home() {
   const [score, setScore] = useState<number>(0);
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
-  let question : number = 1;
+  let questionNum : number = 1;
   const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
   return (
     <main>
       <Header />
       <p className="text-3xl text-end">score : {score}</p>
-      <p className="text-3xl">Question{question} :</p>
+      <p className="text-3xl text-center">Question {questionNum}</p>
       <Picture src='https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg' alt="Listening" />
       <div className="flex bg-white-500 flex justify-center gap-6">
       
@@ -37,13 +37,12 @@ export default function Home() {
             const newScore = score + 1;
             setScore(newScore);
             setModalTrueIsOpen(true); // Open modal directly on click
-            // countOfClick += 1
           }
           setModalTrueIsOpen(true);
           
           }}
         />
-        <ModalComponents nameOfModal="It's True" state={modalTrueIsOpen} setTest={setModalTrueIsOpen} scoreTest={score} />
+        <ModalComponents nameOfModal="It's True" state={modalTrueIsOpen} setTest={setModalTrueIsOpen} scoreTest={score} question={questionNum + 1}/>
 
         <Button
           name="Eating"
@@ -66,10 +65,9 @@ export default function Home() {
           }}
         />
 
-        <ModalComponents nameOfModal="It's False" state={modalFalseIsOpen} setTest={setModalFalseIsOpen} scoreTest={score} />
+        <ModalComponents nameOfModal="It's False" state={modalFalseIsOpen} setTest={setModalFalseIsOpen} scoreTest={score} question={questionNum + 1}/>
       </div>
-      <br className="word-break: break-all"/>
-      <div  className="flex bg-white-500 h-24">
+      <div  className="flex bg-white-500 h-[7.2rem]">
         <p>;=;</p>
 
       </div>
