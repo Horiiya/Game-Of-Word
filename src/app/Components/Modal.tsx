@@ -53,7 +53,7 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest }: Moda
         fnOnClick={() => {
           setTimeout(() => {
             router.push(`/page2?score=${scoreTest}`)
-          }, 1000); // รอ 1 วินาทีก่อนที่จะ redirect
+          }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
           
         }}
       />
