@@ -31,15 +31,21 @@ export function CardGame({
   const [score, setScore] = useState<number>(scoreProps);
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
-  const [numberOfClick, setNumberOfClick] = useState<number>(0);
+  const [answerAlready, setAnswerAlready] = useState<boolean>(false);
+  // const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
   const handleButtonClick = (isCorrect: boolean) => {
-    const newNumberOfClick = numberOfClick + 1;
-    setNumberOfClick(newNumberOfClick);
-    if (isCorrect && newNumberOfClick <= 1) {
-      const newScore = score + 1;
-      setScore(newScore);
+    // const newNumberOfClick = numberOfClick + 1;
+    // setNumberOfClick(newNumberOfClick);
+    if (isCorrect) {
+
+      if (answerAlready == false) {
+        const newScore = score + 1;
+        setScore(newScore);
+        setAnswerAlready(true)
+      }
       setModalTrueIsOpen(true);
+      
     } else {
       setModalFalseIsOpen(true);
     }

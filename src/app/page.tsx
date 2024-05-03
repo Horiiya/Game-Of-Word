@@ -21,7 +21,7 @@ export default function Home() {
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
   let questionNum : number = 1;
   const [numberOfClick, setNumberOfClick] = useState<number>(0);
-  const filteredData = Data.filter((post) => post.id === 1);
+  const filteredData = Data.filter((post) => post.id === 2);
   const post = filteredData[0]; // Assuming you only want to display the first post
 
   return(
