@@ -108,6 +108,7 @@ interface CardGameProps {
   nameOfButton2Props: string;
   nameOfButton3Props: string;
   nameOfButton4Props: string;
+  descriptionProps: string;
 }
 
 export function CardGame({
@@ -119,30 +120,46 @@ export function CardGame({
   nameOfButton2Props,
   nameOfButton3Props,
   nameOfButton4Props,
+  descriptionProps
 }: CardGameProps) {
   const [score, setScore] = useState<number>(scoreProps);
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
   const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
+  // const handleButtonClick = (isCorrect: boolean) => {
+  //   const newNumberOfClick = numberOfClick + 1;
+  //   setNumberOfClick(newNumberOfClick);
+  //   if (isCorrect) {
+  //     const newScore = score + 1;
+  //     setScore(newScore);
+  //     setModalTrueIsOpen(true);
+  //   } else {
+  //     setModalFalseIsOpen(true);
+  //   }
+  // };
+
   const handleButtonClick = (isCorrect: boolean) => {
     const newNumberOfClick = numberOfClick + 1;
-    setNumberOfClick(newNumberOfClick);
-    if (isCorrect) {
-      const newScore = score + 1;
+    setNumberOfClick(newNumberOfClick)
+    if(newNumberOfClick == 1 && isCorrect) {
+      const newScore = score + 1
       setScore(newScore);
-      setModalTrueIsOpen(true);
-    } else {
-      setModalFalseIsOpen(true);
+      setModalTrueIsOpen(true)
     }
+    setModalTrueIsOpen(true)
+
+
+   
   };
 
   return (
     <main>
       <Header />
+      <p></p>
       <p className="text-3xl text-end">Score: {score}</p>
       <p className="text-3xl">Question {questionProps}:</p>
-      <Picture src={srcProps} alt={altProps} />
+      <Picture src={srcProps} alt={altProps} description={descriptionProps}/>
       <div className="flex bg-white-500 flex justify-center gap-6">
         <Button name={nameOfButton1Props} fnOnClick={() => handleButtonClick(true)} />
         <Button name={nameOfButton2Props} fnOnClick={() => handleButtonClick(false)} />
