@@ -3,6 +3,7 @@ import Picture from './Picture';
 import Header from './Header';
 import Button from './Button';
 import ModalComponents from './Modal';
+import Data from '../Data.json';
 
 interface CardGameProps {
   scoreProps: number;
@@ -32,32 +33,28 @@ export function CardGame({
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
   const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
-  // const handleButtonClick = (isCorrect: boolean) => {
-  //   const newNumberOfClick = numberOfClick + 1;
-  //   setNumberOfClick(newNumberOfClick);
-  //   if (isCorrect) {
-  //     const newScore = score + 1;
-  //     setScore(newScore);
-  //     setModalTrueIsOpen(true);
-  //   } else {
-  //     setModalFalseIsOpen(true);
-  //   }
-  // };
-
   const handleButtonClick = (isCorrect: boolean) => {
     const newNumberOfClick = numberOfClick + 1;
-    setNumberOfClick(newNumberOfClick)
-    if(newNumberOfClick == 1 && isCorrect) {
-      const newScore = score + 1
+    setNumberOfClick(newNumberOfClick);
+    if (isCorrect && newNumberOfClick <= 1) {
+      const newScore = score + 1;
       setScore(newScore);
-      setModalTrueIsOpen(true)
+      setModalTrueIsOpen(true);
+    } else {
+      setModalFalseIsOpen(true);
     }
-    setModalTrueIsOpen(true)
-
-
-   
   };
 
+  const filteredData = Data.filter((post) => post.id === questionProps);
+
+  const post = filteredData[0];
+
+  const checkChoice = (choiceTest: string) => {
+    return (
+      choiceTest === post.answer
+    )
+  }
+  
   return (
     <main>
       <Header />
@@ -66,10 +63,10 @@ export function CardGame({
       <p className="text-3xl">Question {questionProps}:</p>
       <Picture src={srcProps} alt={altProps} description={descriptionProps}/>
       <div className="flex bg-white-500 flex justify-center gap-6">
-        <Button name={nameOfButton1Props} fnOnClick={() => handleButtonClick(true)} />
-        <Button name={nameOfButton2Props} fnOnClick={() => handleButtonClick(false)} />
-        <Button name={nameOfButton3Props} fnOnClick={() => handleButtonClick(false)} />
-        <Button name={nameOfButton4Props} fnOnClick={() => handleButtonClick(false)} />
+        <Button name={nameOfButton1Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton1Props))} />
+        <Button name={nameOfButton2Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton2Props))} />
+        <Button name={nameOfButton3Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton3Props))} />
+        <Button name={nameOfButton4Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton4Props))} />
 
         <ModalComponents
           nameOfModal="It's True"
