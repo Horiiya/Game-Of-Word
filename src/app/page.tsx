@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import ListeningImg from "../app/ImageOfWord/listening.jpg";
 import React from 'react';
 import { useState } from 'react'
 import ReactModal from 'react-modal';
@@ -21,7 +20,7 @@ export default function Home() {
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
   let questionNum : number = 1;
   const [numberOfClick, setNumberOfClick] = useState<number>(0);
-  const filteredData = Data.filter((post) => post.id === 2);
+  const filteredData = Data.filter((post) => post.id === 1);
   const post = filteredData[0]; // Assuming you only want to display the first post
 
   return(

@@ -15,9 +15,9 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest, questi
 
   const router = useRouter();
 
-  const openModalFalse = () => {
-    setTest(true);
-  };
+  // const openModalFalse = () => {
+  //   setTest(true);
+  // };
 
   const closeModalFalse = () => {
     setTest(false);
@@ -53,9 +53,6 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest, questi
     <ButtonTrue
         name="Next Question"
         fnOnClick={() => {
-          // setTimeout(() => {
-          //   router.push(`/page2?score=${scoreTest}`)
-          // }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
           setTimeout(() => {
             router.push(`/question${question + 1}?score=${scoreTest}`)
           }, 500); // รอ 1 วินาทีก่อนที่จะ redirect

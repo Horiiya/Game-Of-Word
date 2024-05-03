@@ -1,24 +1,37 @@
 [
   {
     "id" : 1,
-    "src" : "https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg",
+    "src" : "/ImageOfWord/listening.jpg",
     "alt" : "Listening",
-    "question" : "What is this Pictures test1?",
+    "question" : "What is this Pictures?",
     "answer" : "Listening",
     "choice1" : "Reading",
     "choice2" : "Drinking",
     "choice3" : "Listening",
     "choice4" : "Seeing"
   } ,
+
   {
     "id" : 2,
-    "src" : "https://tenrycolle.com/wp-content/uploads/2022/09/listening-skill-process-1024x1024.jpg",
-    "alt" : "123",
-    "question" : "What is this Pictures test2?",
+    "src" : "/ImageOfWord/drinking.jpg",
+    "alt" : "Drinking",
+    "question" : "What is this Pictures?",
     "answer" : "Drinking",
     "choice1" : "Stoping",
     "choice2" : "Eating",
     "choice3" : "Coming",
     "choice4" : "Drinking"
+  } ,
+
+  {
+    "id" : 3,
+    "src" : "/ImageOfWord/pain.jpg",
+    "alt" : "123",
+    "question" : "How does He feel?",
+    "answer" : "Pain",
+    "choice1" : "Happy",
+    "choice2" : "Pain",
+    "choice3" : "Sad",
+    "choice4" : "Bored"
   }
 ]
