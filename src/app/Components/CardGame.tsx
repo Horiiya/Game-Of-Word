@@ -33,17 +33,15 @@ export function CardGame({
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
   const [answerOnce, setAnswerOnce] = useState<boolean>(false);
   const [answerAlready, setAnswerAlready] = useState<boolean>(false);
-  // const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
   const handleButtonClick = (isCorrect: boolean) => {
-    // const newNumberOfClick = numberOfClick + 1;
-    // setNumberOfClick(newNumberOfClick);
     if (isCorrect) {
       if (answerAlready == false && answerOnce == false) {
-        setAnswerAlready(true)
-        const newScore = score + 1;
+        
+        const newScore: number = score + 1;
         setScore(newScore);
         setAnswerAlready(true)
+        setAnswerOnce(true)
       }
       setModalTrueIsOpen(true);
       
@@ -68,7 +66,7 @@ export function CardGame({
       <Header />
       <p></p>
       <p className="text-3xl text-end">Score: {score}</p>
-      <p className="text-3xl">Question {questionProps}:</p>
+      <p className="text-3xl text-center">Question {questionProps}:</p>
       <Picture src={srcProps} alt={altProps} description={descriptionProps}/>
       <div className="flex bg-white-500 flex justify-center gap-6">
         <Button name={nameOfButton1Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton1Props))} />
@@ -92,12 +90,10 @@ export function CardGame({
         />
       </div>
       <br className="word-break: break-all" />
-      <div className="flex bg-white-500 h-24">
-        <p>;=;</p>
+      <div className="flex bg-white-500 h-[5.8rem]">
       </div>
     </main>
   );
 }
 
 export default CardGame;
-

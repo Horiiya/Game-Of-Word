@@ -11,14 +11,9 @@ interface ModalProps {
   question: number;
 }
 
-export function ModalComponents({ nameOfModal, state, setTest, scoreTest, question}: ModalProps) {
-
+export function ModalComponents({ nameOfModal, state, setTest, scoreTest, question }: ModalProps) {
   const router = useRouter();
-
-  // const openModalFalse = () => {
-  //   setTest(true);
-  // };
-
+  
   const closeModalFalse = () => {
     setTest(false);
   };

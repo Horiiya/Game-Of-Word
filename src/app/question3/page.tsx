@@ -93,7 +93,7 @@ export default function Page({ searchParams } : {
   // console.log(searchParams.score)
   const scoreTest = Number(searchParams.score)
   const [score, setScore] = useState<number>(scoreTest);
-  const filteredData = Data.filter((post) => post.id === 2);
+  const filteredData = Data.filter((post) => post.id === 3);
   const post = filteredData[0]; // Assuming you only want to display the first post
  
   return (
