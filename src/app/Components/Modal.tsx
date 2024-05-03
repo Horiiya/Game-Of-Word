@@ -57,7 +57,7 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest, questi
           //   router.push(`/page2?score=${scoreTest}`)
           // }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
           setTimeout(() => {
-            router.push(`/question${question}?score=${scoreTest}`)
+            router.push(`/question${question + 1}?score=${scoreTest}`)
           }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
         }}
       />
