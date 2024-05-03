@@ -31,6 +31,7 @@ export function CardGame({
   const [score, setScore] = useState<number>(scoreProps);
   const [modalTrueIsOpen, setModalTrueIsOpen] = useState<boolean>(false);
   const [modalFalseIsOpen, setModalFalseIsOpen] = useState<boolean>(false);
+  const [answerOnce, setAnswerOnce] = useState<boolean>(false);
   const [answerAlready, setAnswerAlready] = useState<boolean>(false);
   // const [numberOfClick, setNumberOfClick] = useState<number>(0);
 
@@ -38,8 +39,8 @@ export function CardGame({
     // const newNumberOfClick = numberOfClick + 1;
     // setNumberOfClick(newNumberOfClick);
     if (isCorrect) {
-
-      if (answerAlready == false) {
+      if (answerAlready == false && answerOnce == false) {
+        setAnswerAlready(true)
         const newScore = score + 1;
         setScore(newScore);
         setAnswerAlready(true)
@@ -47,6 +48,7 @@ export function CardGame({
       setModalTrueIsOpen(true);
       
     } else {
+      setAnswerOnce(true)
       setModalFalseIsOpen(true);
     }
   };
