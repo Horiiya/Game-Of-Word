@@ -29,7 +29,7 @@ export default function Home() {
       <div key={post.id}>
       <CardGame 
         scoreProps={score} 
-        questionProps={post.id}
+        questionProps={post.id + 1}
         srcProps={post.src} 
         altProps={post.alt}
         descriptionProps={post.question}
