@@ -4,6 +4,7 @@ import Header from './Header';
 import Button from './Button';
 import ModalComponents from './Modal';
 import Data from '../Data.json';
+import { useRouter } from 'next/navigation';
 
 interface CardGameProps {
   scoreProps: number;
@@ -77,15 +78,15 @@ export function CardGame({
         <ModalComponents
           nameOfModal="It's True"
           state={modalTrueIsOpen}
-          setTest={setModalTrueIsOpen}
-          scoreTest={score}
+          setModal={setModalTrueIsOpen}
+          score={score}
           question={questionProps}
         />
         <ModalComponents
           nameOfModal="It's False"
           state={modalFalseIsOpen}
-          setTest={setModalFalseIsOpen}
-          scoreTest={score}
+          setModal={setModalFalseIsOpen}
+          score={score}
           question={questionProps}
         />
       </div>

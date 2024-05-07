@@ -26,7 +26,7 @@
   {
     "id" : 3,
     "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
+    "alt" : "Pain",
     "question" : "How does He feel?",
     "answer" : "Pain",
     "choice1" : "Happy",
@@ -37,14 +37,14 @@
 
   {
     "id" : 4,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
+    "src" : "/ImageOfWord/tired.jpg",
+    "alt" : "Tired",
     "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
-    "choice2" : "Pain",
+    "answer" : "Tired",
+    "choice1" : "Funny",
+    "choice2" : "Happy",
     "choice3" : "Sad",
-    "choice4" : "Bored"
+    "choice4" : "Tired"
   } ,
 
   {

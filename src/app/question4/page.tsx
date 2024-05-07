@@ -91,10 +91,9 @@ export default function Page({ searchParams } : {
 }) {
 
   // console.log(searchParams.score)
-  const router = useRouter();
   const scoreTest = Number(searchParams.score)
   const [score, setScore] = useState<number>(scoreTest);
-  const filteredData = Data.filter((post) => post.id === 2);
+  const filteredData = Data.filter((post) => post.id === 4);
   const post = filteredData[0]; // Assuming you only want to display the first post
  
   return (
@@ -112,23 +111,7 @@ export default function Page({ searchParams } : {
         nameOfButton3Props={post.choice3}
         nameOfButton4Props={post.choice4}
       />
-      <Button
-        name="Prev"
-        // fnOnClick={() => {
-        //   setTimeout(() => {
-        //     router.push(`/question${post.id - 1}?score=${score}`)
-        //   }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
-        // }}
-        fnOnClick={() => {
-          setTimeout(() => {
-            router.push(`/question${post.id - 1}?score=${score}`)
-          }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
-        }}
-      />
-
       </div>
-
-      
     </main>  
   )
 }

@@ -6,16 +6,16 @@ import { useRouter } from 'next/navigation';
 interface ModalProps {
   nameOfModal: string;
   state: boolean;
-  setTest: React.Dispatch<React.SetStateAction<boolean>>;
-  scoreTest: number;
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+  score: number;
   question: number;
 }
 
-export function ModalComponents({ nameOfModal, state, setTest, scoreTest, question }: ModalProps) {
+export function ModalComponents({ nameOfModal, state, setModal, score, question }: ModalProps) {
   const router = useRouter();
   
   const closeModalFalse = () => {
-    setTest(false);
+    setModal(false);
   };
 
   return (
@@ -49,7 +49,7 @@ export function ModalComponents({ nameOfModal, state, setTest, scoreTest, questi
         name="Next Question"
         fnOnClick={() => {
           setTimeout(() => {
-            router.push(`/question${question + 1}?score=${scoreTest}`)
+            router.push(`/question${question + 1}?score=${score}`)
           }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
         }}
       />
