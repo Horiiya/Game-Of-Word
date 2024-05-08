@@ -2,7 +2,7 @@
   {
     "id" : 1,
     "src" : "/ImageOfWord/listening.jpg",
-    "alt" : "Listening",
+    "alt" : "listening",
     "question" : "What is this Pictures?",
     "answer" : "Listening",
     "choice1" : "Reading",
@@ -14,7 +14,7 @@
   {
     "id" : 2,
     "src" : "/ImageOfWord/drinking.jpg",
-    "alt" : "Drinking",
+    "alt" : "drinking",
     "question" : "What is this Pictures?",
     "answer" : "Drinking",
     "choice1" : "Stoping",
@@ -26,7 +26,7 @@
   {
     "id" : 3,
     "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "Pain",
+    "alt" : "pain",
     "question" : "How does He feel?",
     "answer" : "Pain",
     "choice1" : "Happy",
@@ -38,7 +38,7 @@
   {
     "id" : 4,
     "src" : "/ImageOfWord/tired.jpg",
-    "alt" : "Tired",
+    "alt" : "tired",
     "question" : "How does He feel?",
     "answer" : "Tired",
     "choice1" : "Funny",
@@ -49,73 +49,73 @@
 
   {
     "id" : 5,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
+    "src" : "/ImageOfWord/dancing.png",
+    "alt" : "dancing",
+    "question" : "What is she doing?",
+    "answer" : "Dancing",
+    "choice1" : "Reading",
     "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "choice3" : "Dancing",
+    "choice4" : "Crying"
   } ,
 
   {
     "id" : 6,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
-    "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "src" : "/ImageOfWord/reading.jpg",
+    "alt" : "reading",
+    "question" : "What is this Pictures?",
+    "answer" : "Reading",
+    "choice1" : "Reading",
+    "choice2" : "Boring",
+    "choice3" : "Crying",
+    "choice4" : "Painting"
   } ,
 
   {
     "id" : 7,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
-    "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "src" : "/ImageOfWord/runnyNose.jpg",
+    "alt" : "runnyNose",
+    "question" : "What is this Pictures?",
+    "answer" : "Runny Nose",
+    "choice1" : "Fever",
+    "choice2" : "Runny Nose",
+    "choice3" : "Cough",
+    "choice4" : "Headache"
   } ,
 
   {
     "id" : 8,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
-    "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "src" : "/ImageOfWord/sleeping.jpg",
+    "alt" : "sleeping",
+    "question" : "What is she doing?",
+    "answer" : "Sleeping",
+    "choice1" : "Sicking",
+    "choice2" : "Drinking",
+    "choice3" : "Sading",
+    "choice4" : "Sleeping"
   } ,
 
   {
     "id" : 9,
     "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
-    "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "alt" : "running",
+    "question" : "What is he doing?",
+    "answer" : "Running",
+    "choice1" : "Dancing",
+    "choice2" : "Singing",
+    "choice3" : "Running",
+    "choice4" : "Cooking"
   } ,
 
   {
     "id" : 10,
-    "src" : "/ImageOfWord/pain.jpg",
-    "alt" : "123",
-    "question" : "How does He feel?",
-    "answer" : "Pain",
-    "choice1" : "Happy",
+    "src" : "/ImageOfWord/coughing.jpg",
+    "alt" : "coughing",
+    "question" : "What is this Pictures?",
+    "answer" : "Cough",
+    "choice1" : "Fever",
     "choice2" : "Pain",
-    "choice3" : "Sad",
-    "choice4" : "Bored"
+    "choice3" : "Cough",
+    "choice4" : "Runny Nose"
   }
 ]

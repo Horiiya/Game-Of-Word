@@ -67,51 +67,86 @@
 
 
 
+// 'use client'
+// import Image from "next/image";
+// import ListeningImg from "../app/ImageOfWord/listening.jpg";
+// import React from 'react';
+// import { useState } from 'react'
+// import ReactModal from 'react-modal';
+// // import { useRouter } from 'next/router';
+// import Link from 'next/link';
+// import { useRouter } from 'next/navigation';
+// import Picture from "../Components/Picture";
+// import Header from "../Components/Header";
+// import Button from "../Components/Button";
+// import ModalComponents from "../Components/Modal";
+// import CardGame from "../Components/CardGame"; 
+// import Data from '../Data.json'; 
+
+// export default function Page({ searchParams } : {
+//   searchParams: {
+//     score: string
+//   };
+
+// }) {
+
+//   // console.log(searchParams.score)
+//   const scoreTest = Number(searchParams.score)
+//   const [score, setScore] = useState<number>(scoreTest);
+//   const filteredData = Data.filter((post) => post.id === 3);
+//   const post = filteredData[0]; // Assuming you only want to display the first post
+ 
+//   return (
+//     <main>
+//       <div key={post.id}>
+//       <p>score test : {score}</p>
+//       <CardGame 
+//         scoreProps={score} 
+//         questionProps={post.id}
+//         srcProps={post.src} 
+//         altProps={post.alt}
+//         descriptionProps={post.question}
+//         nameOfButton1Props={post.choice1} 
+//         nameOfButton2Props={post.choice2} 
+//         nameOfButton3Props={post.choice3}
+//         nameOfButton4Props={post.choice4}
+//       />
+//       </div>
+//     </main>  
+//   )
+// }
+
+
 'use client'
-import Image from "next/image";
-import ListeningImg from "../app/ImageOfWord/listening.jpg";
 import React from 'react';
 import { useState } from 'react'
-import ReactModal from 'react-modal';
-// import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Data from '../Data.json';
 import { useRouter } from 'next/navigation';
-import Picture from "../Components/Picture";
-import Header from "../Components/Header";
-import Button from "../Components/Button";
-import ModalComponents from "../Components/Modal";
-import CardGame from "../Components/CardGame"; 
-import Data from '../Data.json'; 
+import dynamic from 'next/dynamic';
 
-export default function Page({ searchParams } : {
-  searchParams: {
-    score: string
-  };
+const CardGame = dynamic(() => import("../Components/CardGame"), {
+  ssr: false,
+})
 
-}) {
-
-  // console.log(searchParams.score)
-  const scoreTest = Number(searchParams.score)
-  const [score, setScore] = useState<number>(scoreTest);
+export default function Home() {
+  const router = useRouter();
   const filteredData = Data.filter((post) => post.id === 3);
-  const post = filteredData[0]; // Assuming you only want to display the first post
- 
-  return (
+  const post = filteredData[0];
+
+  return(
     <main>
       <div key={post.id}>
-      <p>score test : {score}</p>
-      <CardGame 
-        scoreProps={score} 
-        questionProps={post.id}
-        srcProps={post.src} 
-        altProps={post.alt}
-        descriptionProps={post.question}
-        nameOfButton1Props={post.choice1} 
-        nameOfButton2Props={post.choice2} 
-        nameOfButton3Props={post.choice3}
-        nameOfButton4Props={post.choice4}
-      />
+        <CardGame 
+          questionProps={post.id}
+          srcProps={post.src} 
+          altProps={post.alt}
+          descriptionProps={post.question}
+          nameOfButton1Props={post.choice1} 
+          nameOfButton2Props={post.choice2} 
+          nameOfButton3Props={post.choice3}
+          nameOfButton4Props={post.choice4}
+        />
       </div>
     </main>  
-  )
+  );
 }

@@ -121,7 +121,7 @@ interface CardGameProps {
   descriptionProps: string;
 }
 
-export function CardGame({
+export function LastCardGame({
   questionProps,
   srcProps,
   altProps,
@@ -200,4 +200,4 @@ export function CardGame({
   );
 }
 
-export default CardGame;
+export default LastCardGame;

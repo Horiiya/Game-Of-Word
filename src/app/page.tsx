@@ -55,7 +55,7 @@ export default function Home() {
         name="Play"
         fnOnClick={() => {
           setTimeout(() => {
-            router.push(`/question${1}?score=${score}`)
+            router.push(`/question${1}?`)
           }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
         }}
       />
