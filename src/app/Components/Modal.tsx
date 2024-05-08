@@ -113,10 +113,21 @@ export function ModalComponents({ nameOfModal, state, setModal, score, question 
     <ButtonTrue
         name="Next Question"
         fnOnClick={() => {
-          setTimeout(() => {
-            router.push(`/question${question + 1}?`)
-          }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
-        }}
+          if(question + 1 === 11) {
+            setTimeout(() => {
+              router.push(`/result`)
+            }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
+          }
+          else {
+            setTimeout(() => {
+              router.push(`/question${question + 1}?`)
+            }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
+          }}
+          } 
+        //   setTimeout(() => {
+        //     router.push(`/question${question + 1}?`)
+        //   }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
+        // }}
       />
     </div>  
     
