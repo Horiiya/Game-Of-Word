@@ -12,7 +12,8 @@ const config: Config = {
         'blueOfButton' : '#1D5B95',
         'hoverOfButton' : '#318FE7',
         'resultDiv' : '#95B5F5',
-        'borderDiv' : '#6685C4'
+        'borderDiv' : '#6685C4',
+        'header' : '#38599D'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
