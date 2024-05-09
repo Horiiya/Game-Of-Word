@@ -144,38 +144,110 @@
 
 // }
 
+
+
+
+
+// 'use client'
+
+// import React from 'react';
+
+// import Button from './Components/Button';
+// import { useRouter } from 'next/navigation';
+// // Make sure the path is correct relative to your project structure
+// // import LogoGame from '/public/logoGame.jpg'; 
+// import LogoGame from '/public/ImageOfWord/logoGame.jpg'; 
+// import Picture from './Components/Picture';
+// import Image from 'next/image';
+
+// export default function Home() {
+//   const router = useRouter();
+
+//   return (
+//     <main>
+//       <br></br>
+//       <p className="text-blue-500 text-3xl text-center list-style-position: inside">Let's Play Game</p>
+//       <br></br>
+//       <br></br>
+//       <br></br>
+//       <div className='flex justify-center'>
+//         <Image
+//           src={LogoGame}
+//           alt="LogoGame"
+//           width={1000}
+//           height={500}
+//         />
+//       </div>
+
+//       <br></br>
+//       <br></br>
+//       <br></br>
+
+//       <div className='flex justify-center'>
+//       <Button
+//           name="Play"
+//           fnOnClick={() => {
+//             setTimeout(() => {
+//               router.push(`/question${1}?`);
+//           }, 500); // Wait 1 second before redirect
+//           }}
+//         />
+        
+//       </div>
+      
+      
+      
+//     </main>
+//   );
+// }
+
+
+
+// Import statements
 'use client'
-
 import React from 'react';
-
-import Button from './Components/Button';
+import Button from './Components/Button'; // Assuming Button component is defined elsewhere
 import { useRouter } from 'next/navigation';
-// Make sure the path is correct relative to your project structure
-// import LogoGame from '/public/logoGame.jpg'; 
-import LogoGame from '/public/ImageOfWord/logoGame.jpg'; 
-import Picture from './Components/Picture';
 import Image from 'next/image';
+import LogoGame from '/public/ImageOfWord/logoGame.jpg'; 
 
+// Function component with appropriate styling
 export default function Home() {
   const router = useRouter();
 
   return (
-    <main>
-      <p>Let's Play Game</p>
-      <Image
-        src={LogoGame}
-        alt="ImgListening"
-        width={300}
-        height={50}
-      />
-      <Button
-        name="Play"
-        fnOnClick={() => {
-          setTimeout(() => {
-            router.push(`/question${1}?`);
-          }, 500); // Wait 1 second before redirect
-        }}
-      />
+    <main className="container mx-auto px-4 py-8 bg-white">  {/* Added container and basic padding */}
+      <p className="text-blue-500 text-4xl text-center">Let's Play Game</p>  {/* Increased text size to 4xl */}
+      <br />
+
+      <div className="flex justify-center">
+        <Image
+          src={LogoGame}
+          alt="LogoGame"
+          width={1000}
+          height={500}
+        />
+      </div>
+
+      <br />
+      <br />
+
+      <div className="flex justify-center bg-white">
+
+        <button className="bg-blueOfButton hover:bg-hoverOfButton text-white font-bold py-3 px-6 rounded-full flex text-xl"
+          onClick={() => {
+            setTimeout(() => {
+              router.push(`/question${1}?`);
+            }, 500);
+          }}>
+          Let's Play
+        </button>
+        {/* <div className="flex bg-white-500 h-[10rem]"></div> */}
+
+        <br></br>
+      </div>
+      <div className="flex bg-white-500 h-[8.5rem]"></div>
+      {/* <div className="flex bg-white-500 h-[10rem]"></div> */}
     </main>
   );
 }

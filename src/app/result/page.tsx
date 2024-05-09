@@ -1,4 +1,3 @@
-
 'use client'
 import React, { useState, useEffect } from 'react';
 import Data from '../Data.json';
@@ -18,8 +17,33 @@ export default function Result() {
 
   return (
     <main>
-      <p>Number Of Question {Data.length}</p>
-      <p>Number Of Correct Question {score}</p>
+      <div className="flex bg-white-500 h-[9.5rem]"></div>
+      <div className='flex justify-center'>
+        <div className="items-center bg-resultDiv w-[35rem] h-[25rem] rounded-[2rem]">
+        <div className="flex bg-white-500 h-[1rem]"></div>
+        <p className='text-center text-4xl'>Summarize of score</p>
+        <div className="flex h-[1rem]"></div>
+        <div className="border-b-4 border-borderDiv w-[35rem]"></div>
+        <div className="flex h-[2.2rem]"></div>
+        {/* <p className='text-2xl ml-[7rem] py-3'>Total Number Of Question :  {Data.length}</p>
+        <p className='text-2xl ml-[7rem] py-3'>Number Of Correct Question  : {score}</p>
+        <p className='text-2xl ml-[7rem] py-3'>Number Of InCorrect Question : {Data.length - score}</p> */}
+
+        <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Total Number Of Question {'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}: {Data.length}</p>
+        
+        <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number Of Correct Question {'\u00A0\u00A0'} : {score}</p>
+{/* 
+        <p className='text-2xl ml-[0rem] py-3'>Total Number Of Question{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}:{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}{Data.length}</p> */}
+
+        <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number Of InCorrect Question : {Data.length - score}</p>
+        <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>number of score as percent {'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}: {(score / Data.length) * 100}%</p>
+        </div>
+      </div>
+      <div className="flex bg-white-500 h-[8.9rem]"></div>
+      
+
+      {/* <p>Number Of Question {Data.length}</p>
+      <p>Number Of Correct Question {score}</p> */}
     </main>
   );
 }
