@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-import ButtonTrue from "./Button";
+import Button from "./Button";
 import { useRouter } from 'next/navigation';
 
 interface ModalProps {
@@ -45,7 +45,7 @@ export function ModalComponents({ nameOfModal, state, setModal, score, question 
     >
     <h2 className="text-blue-500 text-center text-2xl">{nameOfModal}</h2>
     <div className="bg-white-500 flex justify-center items-end h-56">
-    <ButtonTrue
+    <Button
         name="Next Question"
         fnOnClick={() => {
           if(question + 1 === 11) {
