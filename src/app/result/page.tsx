@@ -25,15 +25,10 @@ export default function Result() {
         <div className="flex h-[1.5rem]"></div>
         <div className="border-b-4 border-borderDiv w-[35rem]"></div>
         <div className="flex h-[1.7rem]"></div>
-        {/* <p className='text-2xl ml-[7rem] py-3'>Total Number Of Question :  {Data.length}</p>
-        <p className='text-2xl ml-[7rem] py-3'>Number Of Correct Question  : {score}</p>
-        <p className='text-2xl ml-[7rem] py-3'>Number Of InCorrect Question : {Data.length - score}</p> */}
 
         <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Total Number Of Question {'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}: {Data.length}</p>
         
         <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number Of Correct Question {'\u00A0\u00A0\u00A0'} : {score}</p>
-{/* 
-        <p className='text-2xl ml-[0rem] py-3'>Total Number Of Question{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}:{'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}{Data.length}</p> */}
 
         <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number Of InCorrect Question {'\u00A0'}: {Data.length - score}</p>
         <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number of score as percent {'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}: {(score / Data.length) * 100}%</p>
@@ -41,9 +36,6 @@ export default function Result() {
       </div>
       <div className="flex bg-white-500 h-[8.9rem]"></div>
       
-
-      {/* <p>Number Of Question {Data.length}</p>
-      <p>Number Of Correct Question {score}</p> */}
     </main>
   );
 }
