@@ -14,7 +14,6 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8 bg-white">  {/* Added container and basic padding */}
       <p className="text-blue-500 text-4xl text-center">Let's Play Game</p>  {/* Increased text size to 4xl */}
       <br />
-      <div className="flex bg-white-500 h-[1rem]"></div>
 
       <div className="flex justify-center">
         <Image
@@ -28,7 +27,8 @@ export default function Home() {
       <br />
       <br />
 
-      <div className="flex justify-center bg-white">
+      {/* <div className="flex justify-center bg-white"> */}
+      <div className="flex justify-center">
 
         <button className="bg-blueOfButton hover:bg-hoverOfButton text-white font-bold py-3 px-6 rounded-full flex text-xl"
           onClick={() => {
@@ -42,7 +42,7 @@ export default function Home() {
           
         <br></br>
       </div>
-      {/* <div className="flex bg-white-500 h-[0.1rem]"></div> */}
+      <div className="flex bg-white-500 h-[8.5rem]"></div>
       {/* <div className="flex bg-white-500 h-[10rem]"></div> */}
     </main>
   );

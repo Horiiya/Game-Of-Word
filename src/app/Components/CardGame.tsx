@@ -49,6 +49,33 @@ export function CardGame({
   }, [score]);
 
   const handleButtonClick = (isCorrect: boolean) => {
+   
+    // if (isCorrect && !answeredOnce[questionProps] && !answeredQuestions[questionProps]) {
+
+      
+    //     const newScore: number = score + 1;
+    //     setScore(newScore);
+    //     const updatedQuestions = { ...answeredQuestions, [questionProps]: true };
+    //     setAnsweredQuestions(updatedQuestions);
+    //     localStorage.setItem(localStorageKey, JSON.stringify(updatedQuestions));
+
+    //     const updatedAnswerOnce = { ...answeredOnce, [questionProps]: true };
+    //     setAnsweredOnce(updatedAnswerOnce);
+    //     localStorage.setItem('answeredOnce', JSON.stringify(updatedAnswerOnce));
+
+    //     setModalTrueIsOpen(true);
+    // } 
+    // else if (isCorrect && !answeredQuestions[questionProps]) {
+    //   const updatedQuestions = { ...answeredQuestions, [questionProps]: true };
+    //   setAnsweredQuestions(updatedQuestions);
+    //   localStorage.setItem(localStorageKey, JSON.stringify(updatedQuestions));
+    //   setModalTrueIsOpen(true);
+    // }
+    // else if (isCorrect && !answeredOnce[questionProps]) {
+    //   const updatedAnswerOnce = { ...answeredOnce, [questionProps]: true };
+    //     setAnsweredOnce(updatedAnswerOnce);
+    //     localStorage.setItem('answeredOnce', JSON.stringify(updatedAnswerOnce));
+    // }
 
     if (isCorrect) {
       if(!answeredOnce[questionProps] && !answeredQuestions[questionProps]) {
@@ -122,20 +149,8 @@ export function CardGame({
           question={questionProps}
         />
       </div>
-
-      {questionProps === 1 ? (
-        <div className='flex justify-end p-[2.7rem]'>
-      </div>
-      ) : null}
-
-      
-      {questionProps >= 2 && (
-        <div className='flex justify-start p-[1.5rem]'>
-          <Button name="Previous" fnOnClick={() => router.push(`/question${questionProps - 1}?`)} />
-        </div>
-       )}
-      
-      <div className="flex bg-white-500 h-[0.8rem]"></div>
+      <br className="word-break: break-all" />
+      <div className="flex bg-white-500 h-[5.8rem]"></div>
       
     </main>
   );

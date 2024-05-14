@@ -1,104 +1,22 @@
-// 'use client'
-// import React from 'react';
-// import { useState } from 'react'
-// import Data from '../Data.json';
-// import { useRouter } from 'next/navigation';
-// import dynamic from 'next/dynamic';
-
-// const CardGame = dynamic(() => import("../Components/CardGame"), {
-//   ssr: false,
-// })
-
-// export default function Home() {
-//   const router = useRouter();
-//   const filteredData = Data.filter((post) => post.id === 1);
-//   const post = filteredData[0];
-
-//   return(
-//     <main>
-//       <div key={post.id}>
-//         <CardGame 
-//           questionProps={post.id}
-//           srcProps={post.src} 
-//           altProps={post.alt}
-//           descriptionProps={post.question}
-//           nameOfButton1Props={post.choice1} 
-//           nameOfButton2Props={post.choice2} 
-//           nameOfButton3Props={post.choice3}
-//           nameOfButton4Props={post.choice4}
-//         />
-//       </div>
-//     </main>  
-//   );
-// }
-
-
-
-
-// 'use client'
-// import React, { useState, useEffect } from 'react';
-// import Data from '../Data.json';
-// import dynamic from 'next/dynamic';
-
-// const CardGame = dynamic(() => import("../Components/CardGame"), {
-//   ssr: false,
-// });
-
-// interface QuestionState {
-//   answerOnce: boolean;
-//   answerAlready: boolean;
-// }
-
-// export default function Home() {
-//   const [questionStates, setQuestionStates] = useState<QuestionState[]>(() => {
-//     const storedQuestionStates = localStorage.getItem('questionStates');
-//     return storedQuestionStates ? JSON.parse(storedQuestionStates) : Array.from({ length: 10 }, () => ({
-//       answerOnce: false,
-//       answerAlready: false,
-//     }));
-//   });
-
-//   const filteredData = Data.filter((post) => post.id === 1);
-//   const post = filteredData[0];
-
-//   useEffect(() => {
-//     localStorage.setItem('questionStates', JSON.stringify(questionStates));
-//   }, [questionStates]);
-
-//   return (
-//     <main>
-//       <div key={post.id}>
-//         <CardGame
-//           questionProps={post.id}
-//           srcProps={post.src}
-//           altProps={post.alt}
-//           descriptionProps={post.question}
-//           nameOfButton1Props={post.choice1}
-//           nameOfButton2Props={post.choice2}
-//           nameOfButton3Props={post.choice3}
-//           nameOfButton4Props={post.choice4}
-//           questionStates={questionStates}
-//           setQuestionStates={setQuestionStates}
-//         />
-//       </div>
-//     </main>
-//   );
-// }
-
-
-
 'use client'
 import React, { useEffect } from 'react';
 import Data from '../Data.json';
 import dynamic from 'next/dynamic';
+import Button from '../Components/Button';
+import { useRouter } from 'next/navigation';
+
+
+
 
 const CardGame = dynamic(() => import("../Components/CardGame"), {
   ssr: false,
 });
 
+
 export default function Home() {
   const filteredData = Data.filter((post) => post.id === 1);
   const post = filteredData[0];
+  const router = useRouter();
 
   useEffect(() => {
     // ตรวจสอบว่ามีข้อมูลใน local storage หรือไม่
@@ -127,6 +45,7 @@ export default function Home() {
           nameOfButton4Props={post.choice4}
         />
       </div>
+      
     </main>
   );
 }
