@@ -51,18 +51,14 @@ export function ModalComponents({ nameOfModal, state, setModal, score, question 
           if(question + 1 === 11) {
             setTimeout(() => {
               router.push(`/result`)
-            }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
+            }, 500); 
           }
           else {
             setTimeout(() => {
               router.push(`/question${question + 1}?`)
-            }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
+            }, 500);
           }}
           } 
-        //   setTimeout(() => {
-        //     router.push(`/question${question + 1}?`)
-        //   }, 500); // รอ 1 วินาทีก่อนที่จะ redirect
-        // }}
       />
     </div>  
     

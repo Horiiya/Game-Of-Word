@@ -39,6 +39,8 @@ export default function Result() {
         <p className='border-b-[0.1rem] text-2xl ml-[4rem] mr-[3.5rem] py-3'>Number of score as percent {'\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0'}: {(score / Data.length) * 100}%</p>
         </div>
       </div>
+
+
       <div className="flex bg-white-500 h-[8.9rem]"></div>
       
 
