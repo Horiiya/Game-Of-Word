@@ -8,8 +8,12 @@
     "choice1" : "Reading",
     "choice2" : "Drinking",
     "choice3" : "Listening",
-    "choice4" : "Seeing"
-  } ,
+    "choice4" : "Seeing",
+    "descriptionChoice1" : "Reading about books",
+    "descriptionChoice2" : "Drinking about drinks",
+    "descriptionChoice3" : "Listening about hearing",
+    "descriptionChoice4" : "Viewing about vision"
+  },
 
   {
     "id" : 2,
@@ -20,8 +24,12 @@
     "choice1" : "Stoping",
     "choice2" : "Eating",
     "choice3" : "Coming",
-    "choice4" : "Drinking"
-  } ,
+    "choice4" : "Drinking",
+    "descriptionChoice1" : "cause (an action, process, or event) to come to an end",
+    "descriptionChoice2" : "Eating is about the mouth and food",
+    "descriptionChoice3" : "due to happen or just beginning",
+    "descriptionChoice4" : "Drinking about drinks"
+  },
 
   {
     "id" : 3,
@@ -32,7 +40,11 @@
     "choice1" : "Happy",
     "choice2" : "Pain",
     "choice3" : "Sad",
-    "choice4" : "Bored"
+    "choice4" : "Bored",
+    "descriptionChoice1" : "feeling or showing pleasure or contentment",
+    "descriptionChoice2" : "physical suffering or discomfort caused by illness or injury",
+    "descriptionChoice3" : "affected with or expressive of grief or unhappiness",
+    "descriptionChoice4" : "feeling tired and unhappy because something is not interesting or because you have nothing to do"
   } ,
 
   {
@@ -44,7 +56,11 @@
     "choice1" : "Funny",
     "choice2" : "Happy",
     "choice3" : "Sad",
-    "choice4" : "Tired"
+    "choice4" : "Tired",
+    "descriptionChoice1" : "causing laughter or amusement; humorous",
+    "descriptionChoice2" : "feeling or showing pleasure or contentment",
+    "descriptionChoice3" : "affected with or expressive of grief or unhappiness",
+    "descriptionChoice4" : "in need of sleep or rest; weary"
   } ,
 
   {
@@ -56,7 +72,11 @@
     "choice1" : "Reading",
     "choice2" : "Pain",
     "choice3" : "Dancing",
-    "choice4" : "Crying"
+    "choice4" : "Crying",
+    "descriptionChoice1" : "Reading about books",
+    "descriptionChoice2" : "physical suffering or discomfort caused by illness or injury",
+    "descriptionChoice3" : "the activity of dancing for pleasure or in order to entertain others",
+    "descriptionChoice4" : "description of Choice4 It'Drinking"
   } ,
 
   {
@@ -68,7 +88,11 @@
     "choice1" : "Reading",
     "choice2" : "Boring",
     "choice3" : "Crying",
-    "choice4" : "Painting"
+    "choice4" : "Painting",
+    "descriptionChoice1" : "Reading about books",
+    "descriptionChoice2" : "not interesting; tedious",
+    "descriptionChoice3" : "the shedding of tears; weeping",
+    "descriptionChoice4" : "the process or art of using paint, in a picture, as a protective coating, or as decoration"
   } ,
 
   {
@@ -80,7 +104,11 @@
     "choice1" : "Fever",
     "choice2" : "Runny Nose",
     "choice3" : "Cough",
-    "choice4" : "Headache"
+    "choice4" : "Headache",
+    "descriptionChoice1" : "an abnormally high body temperature, usually accompanied by shivering, headache, and in severe instances, delirium",
+    "descriptionChoice2" : "fluid run out of the nose",
+    "descriptionChoice3" : "expel air from the lungs with a sudden sharp sound",
+    "descriptionChoice4" : "a continuous pain in the head"
   } ,
 
   {
@@ -92,7 +120,11 @@
     "choice1" : "Sicking",
     "choice2" : "Drinking",
     "choice3" : "Sading",
-    "choice4" : "Sleeping"
+    "choice4" : "Sleeping",
+    "descriptionChoice1" : "description of Choice1",
+    "descriptionChoice2" : "Drinking about drinks",
+    "descriptionChoice3" : "experiencing or showing sorrow or unhappiness",
+    "descriptionChoice4" : "the fact, state, or condition of being asleep."
   } ,
 
   {
@@ -104,7 +136,11 @@
     "choice1" : "Dancing",
     "choice2" : "Singing",
     "choice3" : "Running",
-    "choice4" : "Cooking"
+    "choice4" : "Cooking",
+    "descriptionChoice1" : "the activity of dancing for pleasure or in order to entertain others",
+    "descriptionChoice2" : "the activity of performing songs or tunes by making musical sounds with the voice.",
+    "descriptionChoice3" : "the action or movement of a runner.",
+    "descriptionChoice4" : "the practice or skill of preparing food by combining, mixing, and heating ingredients"
   } ,
 
   {
@@ -116,6 +152,12 @@
     "choice1" : "Fever",
     "choice2" : "Pain",
     "choice3" : "Cough",
-    "choice4" : "Runny Nose"
+    "choice4" : "Runny Nose",
+    "descriptionChoice1" : "an abnormally high body temperature, usually accompanied by shivering, headache, and in severe instances, delirium",
+    "descriptionChoice2" : "physical suffering or discomfort caused by illness or injury",
+    "descriptionChoice3" : "expel air from the lungs with a sudden sharp sound",
+    "descriptionChoice4" : "fluid run out of the nose"
   }
+
+
 ]

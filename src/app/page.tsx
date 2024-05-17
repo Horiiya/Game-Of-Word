@@ -42,7 +42,7 @@ export default function Home() {
           
         <br></br>
       </div>
-      <div className="flex bg-white-500 h-[8.5rem]"></div>
+      <div className="flex bg-white-500 h-[1.1rem]"></div>
       {/* <div className="flex bg-white-500 h-[10rem]"></div> */}
     </main>
   );
