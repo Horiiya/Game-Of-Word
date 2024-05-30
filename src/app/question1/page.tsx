@@ -53,7 +53,7 @@
 
 
 'use client'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Data from '../Data.json';
 import dynamic from 'next/dynamic';
 import Button from '../Components/Button';
@@ -90,7 +90,7 @@ export default function Home() {
           questionProps={post.id}
           srcProps={post.src}
           altProps={post.alt}
-          descriptionProps={post.question}
+          descriptionOfQuestionProps={post.question}
           nameOfButton1Props={post.choice1}
           nameOfButton2Props={post.choice2}
           nameOfButton3Props={post.choice3}

@@ -72,7 +72,7 @@ export default function Home() {
           questionProps={post.id}
           srcProps={post.src}
           altProps={post.alt}
-          descriptionProps={post.question}
+          descriptionOfQuestionProps={post.question}
           nameOfButton1Props={post.choice1}
           nameOfButton2Props={post.choice2}
           nameOfButton3Props={post.choice3}

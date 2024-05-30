@@ -513,19 +513,20 @@ interface CardGameProps {
   nameOfButton2Props: string;
   nameOfButton3Props: string;
   nameOfButton4Props: string;
-  descriptionProps: string;
+  descriptionOfQuestionProps: string;
 
 }
 
 export function CardGame({
   questionProps,
+
   srcProps,
   altProps,
   nameOfButton1Props,
   nameOfButton2Props,
   nameOfButton3Props,
   nameOfButton4Props,
-  descriptionProps,
+  descriptionOfQuestionProps,
 }: CardGameProps) {
   const router = useRouter();
   const localStorageKey = 'answeredQuestions';
@@ -685,7 +686,7 @@ export function CardGame({
         </div>
       </div>
       <p className="text-3xl text-center">Question {questionProps}:</p>
-      <Picture src={srcProps} alt={altProps} description={descriptionProps} />
+      <Picture src={srcProps} alt={altProps} description={descriptionOfQuestionProps} />
       {chooseDescription()} {/* ใช้ chooseDescription และแสดงผล */}
       <div className="flex bg-white-500 flex justify-center gap-6">
         <Button name={nameOfButton1Props} fnOnClick={() => handleButtonClick(checkChoice(nameOfButton1Props), index[0])} />
@@ -701,7 +702,6 @@ export function CardGame({
           detailOfModal={description[0]}
           state={modalTrueIsOpen}
           setModal={setModalTrueIsOpen}
-          score={score}
           question={questionProps}
         />
         <ModalComponents
@@ -711,7 +711,6 @@ export function CardGame({
           detailOfModal={description[1]}
           state={modalFalseIsOpen}
           setModal={setModalFalseIsOpen}
-          score={score}
           question={questionProps}
         />
         <ModalComponents
@@ -721,7 +720,6 @@ export function CardGame({
           detailOfModal={description[2]}
           state={modalFalseIsOpen2}
           setModal={setModalFalseIsOpen2}
-          score={score}
           question={questionProps}
         />
         <ModalComponents
@@ -731,28 +729,27 @@ export function CardGame({
           detailOfModal={description[3]}
           state={modalFalseIsOpen3}
           setModal={setModalFalseIsOpen3}
-          score={score}
           question={questionProps}
         />
 
       </div>
       <br className="word-break: break-all" />
       {/* <div className="flex bg-white-500 h-[4.7rem]"></div> */}
-      {questionProps === 1 && <div className="flex bg-white-500 h-[4.7rem]"></div>}
+      {questionProps === 1 && <div className="flex bg-white-500 h-[6.45rem]"></div>}
 
       {questionProps >= 2 && (
         <div>
           <div className='flex ml-[1.5rem]'>
             <Button name="Previous" fnOnClick={() => router.push(`/question${questionProps - 1}?`)} />
           </div>
-          <div className="flex bg-white-500 h-[2.3rem]"></div>
+          <div className="flex bg-white-500 h-[4.05rem]"></div>
         </div>
       )}
-      {/* {questionProps >= 2 && <Button name="Previous" fnOnClick={() => router.push(`/question${questionProps - 1}?`)} />
-      } */}
     </main>
   );
   
 }
 
 export default CardGame;
+
+
