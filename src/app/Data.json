@@ -76,7 +76,7 @@
     "descriptionChoice1" : "Reading about books",
     "descriptionChoice2" : "physical suffering or discomfort caused by illness or injury",
     "descriptionChoice3" : "the activity of dancing for pleasure or in order to entertain others",
-    "descriptionChoice4" : "description of Choice4 It'Drinking"
+    "descriptionChoice4" : "the shedding of tears; weeping"
   } ,
 
   {
@@ -121,10 +121,10 @@
     "choice2" : "Drinking",
     "choice3" : "Sading",
     "choice4" : "Sleeping",
-    "descriptionChoice1" : "description of Choice1",
+    "descriptionChoice1" : "physically or mentally ill; not well or healthy",
     "descriptionChoice2" : "Drinking about drinks",
     "descriptionChoice3" : "experiencing or showing sorrow or unhappiness",
-    "descriptionChoice4" : "the fact, state, or condition of being asleep."
+    "descriptionChoice4" : "the fact, state, or condition of being asleep"
   } ,
 
   {
@@ -138,8 +138,8 @@
     "choice3" : "Running",
     "choice4" : "Cooking",
     "descriptionChoice1" : "the activity of dancing for pleasure or in order to entertain others",
-    "descriptionChoice2" : "the activity of performing songs or tunes by making musical sounds with the voice.",
-    "descriptionChoice3" : "the action or movement of a runner.",
+    "descriptionChoice2" : "the activity of performing songs or tunes by making musical sounds with the voice",
+    "descriptionChoice3" : "the action or movement of a runner",
     "descriptionChoice4" : "the practice or skill of preparing food by combining, mixing, and heating ingredients"
   } ,
 
