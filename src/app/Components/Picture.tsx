@@ -13,7 +13,8 @@ const ImageComponent: FC<ImageProps> = ({ src, alt, description }) => {
       <br />
     <div className="flex justify-center">
       <figure className="max-w-lg">
-        <Image className="h-auto max-w-full rounded-lg" src={src} alt={alt} width={300} height={50}/>
+        {/* <Image className="h-auto max-w-full rounded-lg" src={src} alt={alt} width={300} height={50}/> */}
+        <img className="h-auto max-w-full rounded-lg" src={src} alt={alt} width={300} height={50}/>
         <figcaption className="mt-2 text-xl text-center text-gray-500 dark:text-gray-400">{description}</figcaption>
       </figure>
     </div>

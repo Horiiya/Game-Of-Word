@@ -8,6 +8,7 @@ export async function GET() {
     connection.release();
     
     return NextResponse.json(rows)
+    
   } catch (error: any) {
       return NextResponse.json({
         error: error
