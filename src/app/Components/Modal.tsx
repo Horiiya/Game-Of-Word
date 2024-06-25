@@ -61,11 +61,18 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
               router.push(`/result`)
             }, 500); 
           }
+          // else {
+          //   setTimeout(() => {
+          //     router.push(`/question${question + 1}?`)
+          //   }, 500);
+          // }
+          
           else {
             setTimeout(() => {
-              router.push(`/question${question + 1}?`)
+              router.push(`/question/${question + 1}?`)
             }, 500);
-          }}
+          }
+            }
           } 
       />
     </div>  

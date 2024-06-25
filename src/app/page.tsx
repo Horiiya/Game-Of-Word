@@ -30,14 +30,24 @@ export default function Home() {
       {/* <div className="flex justify-center bg-white"> */}
       <div className="flex justify-center">
 
-        <button className="bg-blueOfButton hover:bg-hoverOfButton text-white font-bold py-3 px-6 rounded-full flex text-xl"
+        {/* <button className="bg-blueOfButton hover:bg-hoverOfButton text-white font-bold py-3 px-6 rounded-full flex text-xl"
           onClick={() => {
             setTimeout(() => {
               router.push(`/question${1}?`);
             }, 500);
           }}>
           Let's Play
+        </button> */}
+        
+        <button className="bg-blueOfButton hover:bg-hoverOfButton text-white font-bold py-3 px-6 rounded-full flex text-xl"
+          onClick={() => {
+            setTimeout(() => {
+              router.push(`/question/${1}?`);
+            }, 500);
+          }}>
+          Let's Play
         </button>
+
         {/* <div className="flex bg-white-500 h-[10rem]"></div> */}
           
         <br></br>
