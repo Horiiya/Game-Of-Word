@@ -1,12 +1,3 @@
-// export default function QuestionDetails({
-//   params,
-// }: {
-//   params: { questionId : number };
-// }) {
-//   return <h1>Details about question {params.questionId}</h1>
-// }
-
-
 'use client'
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
@@ -39,7 +30,7 @@ export default function Home({
   const [data, setData] = useState<DataItem | null>(null);
 
   useEffect(() => {
-    // ตรวจสอบว่ามีข้อมูลใน local storage
+    // check if have data in local storage
     const storedQuestionStates = localStorage.getItem('questionStates');
     if (!storedQuestionStates) {
       // ถ้าไม่มีข้อมูลให้กำหนดค่าเริ่มต้นใน local storage
