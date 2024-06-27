@@ -629,7 +629,11 @@ export function CardGame({
           <div className='flex ml-[1rem]'>
             {/* <Button name="Previous" fnOnClick={() => router.push(`/question${questionProps - 1}`)} /> */}
             
-            <button className="text-blueText relative border-[3px] border-blueText bg-conclustion font-medium rounded-[20px] py-1 pl-[30px] pr-[25px] text-xl max-[320px]:text-[18px]"
+            <button className="text-blueText relative border-[3px] 
+            border-blueText bg-conclustion font-medium 
+            rounded-[20px] py-1 pl-[30px] pr-[25px]
+            bg-white hover:bg-blue-200 
+            text-xl max-[320px]:text-[18px]"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               onClick={() => router.push(`/question/${questionProps - 1}`)}
@@ -644,20 +648,22 @@ export function CardGame({
                 style={{
                 transition: 'left 0.3s ease-in-out',
                 position: 'relative',
-                left: isHovered ? '10px' : '0',
+                left: isHovered ? '8px' : '0',
               }}
               >
                 back
               </span>
             </button>
 
-            
-            
+          
           </div>
+          {/* <div className="max-[320px]:bg-bgQuestion h-[1.5rem]"></div> */}
         </div>
+
+        
       )}
 
-      <div className="max-[320px]:bg-bgQuestion h-[1.5rem]"></div>
+      {/* <div className="max-[320px]:bg-bgQuestion h-[1.5rem]"></div> */}
     </main>
   );
 }
