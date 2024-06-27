@@ -53,6 +53,7 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
     <h2 className="text-blueText text-center text-2xl">{nameOfModal}</h2>
     <h1 className="text-center text-blueText text-2xl">{detailOfModal}</h1>
     <div className="bg-white-500 flex justify-center items-center absolute inset-x-10 bottom-4">
+
     <Button
         name="Next Question"
         fnOnClick={() => {
@@ -61,19 +62,14 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
               router.push(`/result`)
             }, 500); 
           }
-          // else {
-          //   setTimeout(() => {
-          //     router.push(`/question${question + 1}?`)
-          //   }, 500);
-          // }
-          
+
           else {
             setTimeout(() => {
               router.push(`/question/${question + 1}?`)
             }, 500);
           }
             }
-          } 
+        } 
       />
     </div>  
     

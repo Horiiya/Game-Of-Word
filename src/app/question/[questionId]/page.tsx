@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import bg from '/public/ImageOfWord/bgOfQuestion.jpg'
 
 const CardGame = dynamic(() => import("@/app/Components/CardGame"), {
   ssr: false,
@@ -33,7 +35,7 @@ export default function Home({
     // check if have data in local storage
     const storedQuestionStates = localStorage.getItem('questionStates');
     if (!storedQuestionStates) {
-      // ถ้าไม่มีข้อมูลให้กำหนดค่าเริ่มต้นใน local storage
+      // if not have data so set initial value in local storage 
       const initialQuestionStates = Array.from({ length: 10 }, () => ({
         answerOnce: false,
         answerAlready: false,
@@ -56,7 +58,7 @@ export default function Home({
   }, []);
 
   return (
-    <main>
+    <main className=''>
       <div>
 
         <CardGame
@@ -69,6 +71,28 @@ export default function Home({
           nameOfButton3Props={String(data?.choice3)}
           nameOfButton4Props={String(data?.choice4)}
         />
+
+        <div style={{
+          position: 'fixed',
+          width: '100%',
+          height: '1000px',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+          overflow: 'hidden',
+        }}>
+          <Image
+            alt="background"
+            src={bg}
+            placeholder="blur"
+            quality={100}
+            layout="fill"
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+            }}
+          />
+        </div>
 
       </div>
     </main>
