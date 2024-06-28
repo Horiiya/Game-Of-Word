@@ -632,7 +632,7 @@ export function CardGame({
             <button className="text-blueText relative border-[3px] 
             border-blueText bg-conclustion font-medium 
             rounded-[15px] py-1 pl-[30px] pr-[25px]
-            bg-white hover:bg-[#bdc5d9] 
+            bg-white hover:bg-[#dce0e8] 
             text-xl max-[320px]:text-[18px]"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
