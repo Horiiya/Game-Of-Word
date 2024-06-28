@@ -98,11 +98,41 @@ interface ModalProps {
   color: string;
 }
 
+interface DataItem {
+  id: number;
+  src: Text;
+  alt: Text;
+  question: Text;
+  answer: Text;
+  choice1: Text;
+  choice2: Text;
+  choice3: Text;
+  choice4: Text;
+  descriptionChoice1: Text;
+  descriptionChoice2: Text;
+  descriptionChoice3: Text;
+  descriptionChoice4: Text;
+}
+
 export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, question, color, chocieOfModal }: ModalProps) {
   const router = useRouter();
   const [windowWidth, setWindowWidth] = useState(0);
+  const [dataCount, setDataCount] = useState(0);
 
   useEffect(() => {
+
+    const fetchData = async () => {
+      
+      const res = await fetch('/api/mysqlfeed');
+      const result: DataItem[] = await res.json();
+      // console.log('Fetched data:', result);
+      const filteredData = result.find((item: DataItem) => item.id);
+      setDataCount(result.length);
+      // console.log('Src is: ', String(data?.src));
+      
+    };
+    fetchData();
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -110,6 +140,8 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
     handleResize(); // Set initial width
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+
+   
   }, []);
 
   const closeModalFalse = () => {
@@ -170,10 +202,10 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
       <h2 className="text-blueText text-center text-2xl">{nameOfModal}</h2>
       <h1 className="text-center text-blueText text-2xl">{detailOfModal}</h1>
       <div className="bg-white-500 flex justify-center items-center absolute inset-x-10 bottom-4">
-        <Button
+        {/* <Button
           name="Next Question"
           fnOnClick={() => {
-            if (question + 1 === 11) {
+            if (question + 1 === Number(dataCount+1)) {
               setTimeout(() => {
                 router.push(`/result`);
               }, 500);
@@ -183,7 +215,32 @@ export function ModalComponents({ nameOfModal, detailOfModal, state, setModal, q
               }, 500);
             }
           }}
-        />
+        /> */}
+
+        <button className='bg-white shadow-[inset_0_0_0_2px_#687bab] text-black
+        px-3 py-2.5 rounded-full tracking-widest uppercase 
+        font-bold hover:bg-[#86a0e3] 
+        hover:text-white dark:text-neutral-200 
+        transition duration-200'
+        onClick={() => {
+          if (question + 1 === Number(dataCount+1)) {
+            setTimeout(() => {
+              router.push(`/result`);
+            }, 500);
+          } else {
+            setTimeout(() => {
+              router.push(`/question/${question + 1}?`);
+            }, 500);
+          }
+        }}
+        >
+        
+        Next Question
+
+        </button>
+
+
+
       </div>
     </ReactModal>
   );

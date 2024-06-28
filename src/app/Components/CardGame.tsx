@@ -631,8 +631,8 @@ export function CardGame({
             
             <button className="text-blueText relative border-[3px] 
             border-blueText bg-conclustion font-medium 
-            rounded-[20px] py-1 pl-[30px] pr-[25px]
-            bg-white hover:bg-blue-200 
+            rounded-[15px] py-1 pl-[30px] pr-[25px]
+            bg-white hover:bg-[#bdc5d9] 
             text-xl max-[320px]:text-[18px]"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -654,9 +654,11 @@ export function CardGame({
                 back
               </span>
             </button>
-
+            {/* <div className="max-[320px]:bg-bgQuestion h-[1.5rem]"></div> */}
           
           </div>
+          
+
           {/* <div className="max-[320px]:bg-bgQuestion h-[1.5rem]"></div> */}
         </div>
 
